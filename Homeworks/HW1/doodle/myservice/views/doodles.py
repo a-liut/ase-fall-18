@@ -74,7 +74,7 @@ def vote(id, request):
         abort(400) # Bad Request
     except NonExistingOptionException:
         # TODO: manage the NonExistingOptionException
-        abort(422) # Unprocessable Entity
+        abort(400) # Bad Request
 
     return result
 
